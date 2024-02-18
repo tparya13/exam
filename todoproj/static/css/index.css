@@ -1,0 +1,17 @@
+
+
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.btn{
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+.one btn{
+    padding-right: 30px;
+}
+.two h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
