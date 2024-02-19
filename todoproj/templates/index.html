@@ -33,8 +33,9 @@
          
           <div class="child">
            
-            <a href="{% url 'update' task.id %}" class="btn btn-primary p-2 m-5">Update</a>
-            <a href="{% url 'delete' task.id %}" class="btn btn-success p-2 m-5">Delete</a>
+            <a href="{% url 'update' task.id %}" class="btn btn-warning p-2 m-5">Update</a>
+            <a href="{% url 'delete' task.id %}" class="btn btn-danger p-2 m-5">Delete</a>
+            <a href="{% url 'delete' task.id %}" class="btn btn-success p-2 m-5">view</a>
            
           </div>
         </div>

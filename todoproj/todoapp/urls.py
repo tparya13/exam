@@ -7,6 +7,7 @@ urlpatterns = [
     path('update/<int:id>',views.Update,name='update'),
     
     path('delete/<int:id>',views.Delete,name='delete'),
+    path('view/<int:id>',views.view,name='view'),
     
     
     

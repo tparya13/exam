@@ -20,20 +20,23 @@ def Home(req):
 
 def Update(req,id):
     tasks=Task.objects.get(id=id)
-    # if req.method=="POST":
-    #    task=req.POST.get('task','')
-    #    priority=req.POST.get('priority','')
-    #    Task.objects.filter(id=id).update(task=task,priority=priority)
-    #    return redirect("home")
-    
-    
-    
     f=TodoForm(req.POST or None,instance=tasks)
     if f.is_valid():
         f.save()
         return redirect("home")
         
     return render(req,'formUpdate.html',{"task":tasks,'f':f})
+
+
+def view(req,id):
+    tasks=Task.objects.get(id=id)
+    f=TodoForm(req.POST or None,instance=tasks)
+    if f.is_valid():
+        f.save()
+        return redirect("home")
+        
+    return render(req,'view.html',{"task":tasks,'f':f})
+
 
     
 
